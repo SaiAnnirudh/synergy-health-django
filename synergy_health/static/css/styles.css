@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.9), rgba(195, 207, 226, 0.9)), url('images/health-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); /* Purple to blue gradient */
+    color: white;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    transform: translateX(5px); /* Slight move to the right */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2575fc; /* Blue heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Enhanced Button Styles */
+button, .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active, .btn:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* BMI Calculator Styles */
+.bmi-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(227, 242, 253, 0.9); /* Semi-transparent light blue background */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bmi-result h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2575fc;
+}
+
+.bmi-result p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Weight and Height Tracker Styles */
+.tracker-history {
+    margin-top: 20px;
+}
+
+.tracker-history h3 {
+    color: #2575fc;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tracker-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tracker-history li {
+    background: rgba(241, 241, 241, 0.9); /* Semi-transparent light gray background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Nutritional Plan Styles */
+.nutritional-plan {
+    margin-top: 20px;
+}
+
+.nutritional-plan h3 {
+    color: #2575fc;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.nutritional-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nutritional-plan li {
+    background: rgba(241, 241, 241, 0.9); /* Semi-transparent light gray background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Error Messages */
+.error {
+    color: #ff3860; /* Red error text */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Home Page Styles */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.home-container h2 {
+    font-size: 2.5rem;
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+.home-container .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Call to Action */
+.cta {
+    background: rgba(227, 242, 253, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta .btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+}

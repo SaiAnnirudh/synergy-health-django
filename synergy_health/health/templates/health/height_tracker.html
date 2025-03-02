@@ -1,0 +1,20 @@
+{% extends 'health/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Height Tracker</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Height</button>
+</form>
+
+{% if heights %}
+    <h3>Height History</h3>
+    <ul>
+        {% for height in heights %}
+            <li>{{ height.date }}: {{ height.height }} cm</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

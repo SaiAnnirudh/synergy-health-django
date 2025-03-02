@@ -1,0 +1,39 @@
+{% extends 'health/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home-container">
+    <h2>Welcome to Synergy Health</h2>
+    <p class="tagline">Your all-in-one health management solution.</p>
+
+    <!-- App Features Section -->
+    <div class="features">
+        <div class="feature-card">
+            <img src="{% static 'images/bmi-icon.png' %}" alt="BMI Calculator">
+            <h3>BMI Calculator</h3>
+            <p>Calculate your Body Mass Index (BMI) and track your health status.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{% static 'images/weight-icon.png' %}" alt="Weight Tracker">
+            <h3>Weight Tracker</h3>
+            <p>Monitor your weight over time and achieve your fitness goals.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{% static 'images/height-icon.png' %}" alt="Height Tracker">
+            <h3>Height Tracker</h3>
+            <p>Track your height and growth progress.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{% static 'images/nutrition-icon.png' %}" alt="Nutritional Plan">
+            <h3>Nutritional Plan</h3>
+            <p>Create and follow personalized nutritional plans for a healthier lifestyle.</p>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <p>Ready to take control of your health? Get started now!</p>
+        <a href="{% url 'patient_details' %}" class="btn">Get Started</a>
+    </div>
+</div>
+{% endblock %}

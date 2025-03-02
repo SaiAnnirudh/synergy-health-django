@@ -1,0 +1,25 @@
+{% extends 'health/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Weight Tracker</h2>
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Weight</button>
+</form>
+
+{% if weights %}
+    <div class="tracker-history">
+        <h3>Weight History</h3>
+        <ul>
+            {% for weight in weights %}
+                <li>{{ weight.date }}: {{ weight.weight }} kg</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endblock %}

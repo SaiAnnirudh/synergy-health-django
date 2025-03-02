@@ -1,0 +1,20 @@
+{% extends 'health/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Nutritional Plan</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Plan</button>
+</form>
+
+{% if plans %}
+    <h3>Your Nutritional Plans</h3>
+    <ul>
+        {% for plan in plans %}
+            <li>{{ plan.plan }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}
